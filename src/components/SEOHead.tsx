@@ -25,7 +25,7 @@ export function useSEO({ title, description, section }: SEOProps = {}) {
     if (section) {
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
-        canonical.setAttribute("href", `https://floratissue.edu/#${section}`);
+        canonical.setAttribute("href", `https://flora-tissue-website.vercel.app/#${section}`);
       }
     }
   }, [title, description, section]);
@@ -52,7 +52,7 @@ export function generateSectionSchema(sectionName: string, description: string) 
     "description": description,
     "isPartOf": {
       "@type": "WebPage",
-      "url": "https://floratissue.edu"
+      "url": "https://flora-tissue-website.vercel.app"
     }
   };
 }

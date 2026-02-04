@@ -1,11 +1,11 @@
 # Flora Tissue - robots.txt
-# https://floratissue.edu/robots.txt
+# https://flora-tissue-website.vercel.app/robots.txt
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://floratissue.edu/sitemap.xml
+Sitemap: https://flora-tissue-website.vercel.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
