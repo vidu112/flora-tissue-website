@@ -1,0 +1,44 @@
+# Flora Tissue - robots.txt
+# https://floratissue.edu/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://floratissue.edu/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block development/build files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /*.map$
+
+# Allow all important content
+Allow: /#tissues
+Allow: /#tree3d
+Allow: /#diagram
+Allow: /#meristematic
+Allow: /#quiz
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

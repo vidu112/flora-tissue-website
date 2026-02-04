@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ocean Depths + Botanical Garden Fusion Theme */
+    /* Deep Navy from Ocean Depths: #1a2332 */
+    --background: 217 31% 15%;
+    --foreground: 150 10% 96%;
+    /* Card slightly lighter */
+    --card: 217 31% 18%;
+    --card-foreground: 150 10% 96%;
+    --popover: 217 31% 18%;
+    --popover-foreground: 150 10% 96%;
+    /* Teal from Ocean Depths: #2d8b8b */
+    --primary: 180 50% 36%;
+    --primary-foreground: 217 31% 10%;
+    /* Fern Green from Botanical Garden: #4a7c59 */
+    --secondary: 144 26% 39%;
+    --secondary-foreground: 150 10% 96%;
+    --muted: 217 25% 22%;
+    --muted-foreground: 180 10% 70%;
+    /* Marigold from Botanical Garden: #f9a620 */
+    --accent: 39 95% 55%;
+    --accent-foreground: 217 31% 10%;
+    /* Terracotta: #b7472a */
+    --destructive: 12 63% 44%;
+    --destructive-foreground: 150 10% 96%;
+    /* Seafoam from Ocean Depths: #a8dadc */
+    --border: 181 40% 76%;
+    --input: 217 25% 25%;
+    --ring: 180 50% 36%;
+    --radius: 0.5rem;
+    
+    /* Custom botanical colors */
+    --seafoam: 181 40% 76%;
+    --fern: 144 26% 39%;
+    --marigold: 39 95% 55%;
+    --terracotta: 12 63% 44%;
+    --cream: 60 33% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  @apply transition-all duration-200;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-primary/10;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-seafoam-200 to-fern-500 bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.3),
+              0 0 40px hsl(var(--primary) / 0.2),
+              0 0 60px hsl(var(--primary) / 0.1);
+}

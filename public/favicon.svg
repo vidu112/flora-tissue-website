@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d8b8b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1e3a5f"/>
+  <!-- Leaf shape -->
+  <path d="M50 15 
+           Q70 30 70 50 
+           Q70 75 50 85 
+           Q30 75 30 50 
+           Q30 30 50 15Z" 
+        fill="url(#leafGrad)"/>
+  <!-- Leaf vein -->
+  <path d="M50 20 L50 80" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+  <path d="M50 35 Q60 40 65 35" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+  <path d="M50 35 Q40 40 35 35" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+  <path d="M50 50 Q62 55 68 48" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+  <path d="M50 50 Q38 55 32 48" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+  <path d="M50 65 Q58 68 62 63" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+  <path d="M50 65 Q42 68 38 63" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+</svg>
