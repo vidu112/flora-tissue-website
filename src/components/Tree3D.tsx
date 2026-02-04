@@ -1,9 +1,9 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useState, useRef, useMemo, useCallback, useEffect } from "react";
+import { useState, useRef, useMemo, useCallback } from "react";
 import * as THREE from "three";
 import { cn } from "@/lib/utils";
-import { X, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
+import { X, RotateCcw } from "lucide-react";
 
 // Tree part information
 const treePartInfo = {
@@ -113,7 +113,7 @@ function OrganicBranch({
   start, 
   end, 
   startRadius, 
-  endRadius,
+  endRadius: _endRadius,
   onClick,
   hovered,
   setHovered,
